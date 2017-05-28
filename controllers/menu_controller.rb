@@ -44,7 +44,7 @@ require_relative '../models/address_book'
        if entry_number > address_book.entries.length
          puts "Sorry, there are only #{address_book.entries.length} entry(ies) in address_book"
        else
-         puts address_book.entries[entry_number-1]
+         puts address_book.entries[entry_number]
        end
      when 6
        puts "Good-bye!"
