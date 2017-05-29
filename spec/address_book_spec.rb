@@ -160,7 +160,7 @@ RSpec.describe AddressBook do
      it "searches AddressBook for Billy" do
        book.import_from_csv("entries.csv")
        entry = book.iterative_search("Billy")
-       expect(entry).to be_nil
+       expect(entry).to be_nil 
      end
    end
 
