@@ -29,4 +29,21 @@ class AddressBook
     end
   end
 
+  def binary_search(name) # Search AddressBook for a specific entry by name
+     lower = 0 # index of leftmost item in  array
+     upper = entries.length - 1 #index of rightmost item in array
+     while lower <= upper
+       mid = (lower + upper) / 2 #finds the middle index
+       mid_name = entries[mid].name #retrieve name of entry at middle index
+       if name == mid_name #compares name we are searching for to name of middle index (== makes it case sensitive)
+         return entries[mid] #Found it! Return searched entry
+       elsif name < mid_name
+         upper = mid - 1 #=>name has to be in lower half
+       elsif name > mid_name
+         lower = mid + 1 #=> name has to be in upper half
+       end
+     end
+     return nil # if no match is found
+  end
+
 end
