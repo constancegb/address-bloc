@@ -46,4 +46,9 @@ class AddressBook
      return nil # if no match is found
   end
 
+  def detonate
+    entries.clear
+    puts "All entries have been deleted"
+  end
+
 end

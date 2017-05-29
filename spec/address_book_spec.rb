@@ -121,4 +121,13 @@ RSpec.describe AddressBook do
      end
    end
 
+   describe "#detonate" do
+     it "checks that #detonate removes all entries from address_book" do
+       book.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
+       book.add_entry('Bill Clinton', '010.012.1212', 'bill.clint@lovelace.com')
+       book.detonate
+       expect(book.entries.size).to eq(0)
+     end
+   end
+
 end
